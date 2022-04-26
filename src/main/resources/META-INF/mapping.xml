@@ -1,0 +1,22 @@
+<!--create jpa Entity with mapping.xml-->
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" version="2.1">
+    <description>XML Student mapping</description>
+
+    <entity class="com.example.model.Student">
+        <table name="student" />
+
+        <attributes>
+            <id name="id">
+                <generated-value strategy="AUTO" />
+            </id>
+
+            <basic name="firstName">
+                <column name="first_name" length="158" />
+            </basic>
+
+            <basic name="lastName">
+                <column name="last_name" length="200" />
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
